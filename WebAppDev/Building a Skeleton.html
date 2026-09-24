@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSwap</title>
+
+    <style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4efe6;
+  color: #333333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #526d4e;
+  color: #ffffff;
+  text-align: center;
+  padding: 30px;
+}
+header h1 {
+  margin: 0;
+  font-size: 40px;
+}
+header p {
+  font-style: italic;
+}
+
+nav {
+  margin-top: 20px;
+}
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 12px;
+}
+nav a:hover {
+  color: #c97b46;
+}
+
+section {
+  background-color: #ffffff;
+  max-width: 900px;
+  margin: 25px auto;
+  padding: 25px;
+  border-radius: 8px;
+}
+section h2 {
+  color: #526d4e;
+  border-bottom: 2px solid #c97b46;
+  padding-bottom: 5px;
+}
+section h3 {
+  color: #c97b46;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+dt {
+  color: #526d4e;
+  margin-top: 10px;
+}
+
+img {
+  margin: 10px;
+  border-radius: 8px;
+  max-width: 100%;
+}
+
+footer {
+  background-color: #526d4e;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>SkillSwap</h1>
+        <p>Trade what you have. Get what you need.</p>
+
+        <nav>
+            <a href="#about">About</a> |
+            <a href="#how-it-works">How It Works</a> |
+            <a href="#trades">Trade Ideas</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="about">
+            <h2>About SkillSwap</h2>
+
+            <p>
+                SkillSwap is a community-based website that allows people to trade skills, services, and products instead of always using money.
+                The goal is to make it easier for people to use what they already have to get something they need.
+            </p>
+            <p>
+                For example, someone who knows how to cut hair could offer a haircut in exchange for fresh eggs from a neighbor. Another person might
+                trade lawn care for help repairing a computer.
+            </p>
+        </section>
+
+        <section id="how-it-works">
+            <h2>How SkillSwap Works</h2>
+
+            <p>
+                Users would create a profile and list the skills, services, or items they are willing to trade. They could then browse other listings and
+                find people nearby who have something they are interested in.
+            </p>
+
+            <p>
+                Once two people find a possible trade, they could contact each other and decide if the exchange works for both sides. SkillSwap would help
+                connect people, while the users would decide the value of their trade.
+            </p>
+
+            <h3>Steps to Make a Trade</h3>
+
+            <ol>
+                <li>Create a SkillSwap profile.</li>
+                <li>Post something you can offer.</li>
+                <li>Browse other available trades.</li>
+                <li>Contact another user.</li>
+                <li>Agree on a trade.</li>
+            </ol>
+        </section>
+
+        <section id="trades">
+            <h2>What Can You Trade?</h2>
+
+            <p>
+                SkillSwap could be used for many different types of exchanges. People may have useful skills, homemade goods, extra produce, or
+                other items that someone else in the community needs.
+            </p>
+
+            <h3>Possible Trade Ideas</h3>
+
+            <ul>
+                <li>Haircuts</li>
+                <li>Lawn care</li>
+                <li>Fresh eggs or produce</li>
+                <li>Computer help</li>
+                <li>Home repairs</li>
+                <li>Baked goods</li>
+            </ul>
+
+        <section id="trade-finder">
+            <h2>Find Your Trade Type</h2>
+
+             <p>
+                Tell us what you are offering and what you would like in return.
+            </p>
+
+            <label for="offering">What are you offering?</label>
+            <select id="offering">
+                <option value="">Choose one</option>
+                <option value="skill">A Skill or Service</option>
+                <option value="goods">Goods or Products</option>
+            </select>
+
+            <br><br>
+
+            <label for="wanted">What do you want in return?</label>
+            <select id="wanted">
+                <option value="">Choose one</option>
+                <option value="skill">A Skill or Service</option>
+                <option value="goods">Goods or Products</option>
+            </select>
+
+            <br><br>
+
+            <button id="tradeButton">Find My Trade Type</button>
+
+            <p id="tradeResult"></p>
+        </section>
+
+            <h3>SkillSwap Terms</h3>
+
+            <dl>
+                <dt><strong>Skill</strong></dt>
+                <dd>A service or ability that someone can offer to another person.</dd>
+
+                <dt><strong>Product</strong></dt>
+                <dd>A physical item that someone is willing to exchange.</dd>
+
+                <dt><strong>Trade</strong></dt>
+                <dd>An agreement between two people to exchange skills, services, or products.</dd>
+            </dl>
+        </section>
+
+        <section>
+            <h2>Building a Stronger Community</h2>
+
+            <p>
+                SkillSwap could also help strengthen local communities by helping neighbors connect with each other. Instead of throwing away useful
+                items or paying for every service, people could share their skills and resources with others.
+            </p>
+        </section>
+
+        <section>
+            <h2>Learn More About Bartering and Community Sharing</h2>
+
+            <p>
+                Here are a few outside resources related to bartering, sustainability, and community sharing.
+            </p>
+
+            <ul>
+                <li>
+                    <a href="https://www.investopedia.com/terms/b/barter.asp" target="_blank">
+                        Learn About Bartering
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.epa.gov/recycle" target="_blank">
+                        EPA Recycling and Reuse Information
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.volunteermatch.org/" target="_blank">
+                        VolunteerMatch
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Examples of Things You Could Trade</h2>
+
+            <img
+                src="https://images.unsplash.com/photo-1560066984-138dadb4c035"
+                alt="Hair stylist cutting someone's hair"
+                width="300">
+
+            <img
+                src="https://images.unsplash.com/photo-1506976785307-8732e854ad03"
+                alt="Fresh vegetables and produce"
+                width="300">
+
+            <img
+                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952"
+                alt="Person working on a home improvement project"
+                width="300">
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SkillSwap</p>
+    </footer>
+
+
+    <script>
+        document.getElementById("tradeButton").addEventListener("click", function() {
+
+            // Get the user's input
+            let offering = document.getElementById("offering").value;
+            let wanted = document.getElementById("wanted").value;
+
+            // Where the result will be displayed
+            let result = document.getElementById("tradeResult");
+
+            // Compare the user's choices
+            if (offering === "" || wanted === "") {
+                result.textContent = "Please choose both options.";
+
+            } else if (offering === "skill" && wanted === "skill") {
+                result.textContent =
+                    "You are looking for a Skill-for-Skill trade!";
+
+            } else if (offering === "skill" && wanted === "goods") {
+                result.textContent =
+                    "You are looking for a Skill-for-Goods trade!";
+
+            } else if (offering === "goods" && wanted === "skill") {
+                result.textContent =
+                    "You are looking for a Goods-for-Skill trade!";
+
+            } else if (offering === "goods" && wanted === "goods") {
+                result.textContent =
+                    "You are looking for a Goods-for-Goods trade!";
+
+            } else {
+                result.textContent =
+                    "We couldn't determine your trade type.";
+            }
+        });
+    </script>
+</body>
+
+</html>
