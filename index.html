@@ -306,29 +306,46 @@ footer {
             }
         });
 
-            // Array of SkillSwap members
             const members = [
                 { name: "Alex", skill: "Photography" },
                 { name: "Jordan", skill: "Cooking" },
                 { name: "Taylor", skill: "Graphic Design" },
                 { name: "Morgan", skill: "Car Repair" },
-                { name: "Casey", skill: "Guitar" }
+                { name: "Casey", skill: "Guitar" },
+                { name: "Jamie", skill: "Gardening" },
+                { name: "Riley", skill: "Web Design" },
+                { name: "Cameron", skill: "Woodworking" },
+                { name: "Avery", skill: "Baking" },
+                { name: "Parker", skill: "Sewing" },
+                { name: "Drew", skill: "Computer Repair" },
+                { name: "Reese", skill: "Painting" },
+                { name: "Sam", skill: "Home Improvement" },
+                { name: "Quinn", skill: "Dog Training" },
+                { name: "Blake", skill: "Auto Detailing" }
             ];
             
-            // Display available SkillSwap members
-            document.getElementById("showMembersBtn").addEventListener("click", function () {
+            
+            // Show 3 random SkillSwap members
+            document.getElementById("showMembersBtn").addEventListener("click", function() {
             
                 let memberOutput = "";
+                let availableMembers = [...members];
+                for (let i = 0; i < 3; i++) {
             
-                // Definite loop
-                for (let i = 0; i < members.length; i++) {
+                    
+                    let randomIndex = Math.floor(
+                        Math.random() * availableMembers.length
+                    );
             
+                    let randomMember = availableMembers[randomIndex];
+        
                     memberOutput +=
-                        "<p><strong>" + members[i].name + "</strong>" +
-                        " can teach " + members[i].skill + "</p>";
+                        "<p><strong>" + randomMember.name + "</strong>" +
+                        " can teach " + randomMember.skill + "</p>";
+                    availableMembers.splice(randomIndex, 1);
                 }
-            
-                document.getElementById("memberList").innerHTML = memberOutput;
+                document.getElementById("memberList").innerHTML =
+                    memberOutput;
             });
     </script>
 </body>
