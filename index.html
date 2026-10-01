@@ -269,85 +269,103 @@ footer {
         <p>&copy; 2026 SkillSwap</p>
     </footer>
 
+<script>
 
-    <script>
-        document.getElementById("tradeButton").addEventListener("click", function() {
+    // Find My Trade Type button
+    document.getElementById("tradeButton").addEventListener("click", function() {
 
-            // Get the user's input
-            let offering = document.getElementById("offering").value;
-            let wanted = document.getElementById("wanted").value;
+        let offering = document.getElementById("offering").value;
+        let wanted = document.getElementById("wanted").value;
+        let result = document.getElementById("tradeResult");
 
-            // Where the result will be displayed
-            let result = document.getElementById("tradeResult");
+        if (offering === "" || wanted === "") {
 
-            // Compare the user's choices
-            if (offering === "" || wanted === "") {
-                result.textContent = "Please choose both options.";
+            result.textContent = "Please choose both options.";
 
-            } else if (offering === "skill" && wanted === "skill") {
-                result.textContent =
-                    "You are looking for a Skill-for-Skill trade!";
+        } else if (offering === "skill" && wanted === "skill") {
 
-            } else if (offering === "skill" && wanted === "goods") {
-                result.textContent =
-                    "You are looking for a Skill-for-Goods trade!";
+            result.textContent =
+                "You are looking for a Skill-for-Skill trade!";
 
-            } else if (offering === "goods" && wanted === "skill") {
-                result.textContent =
-                    "You are looking for a Goods-for-Skill trade!";
+        } else if (offering === "skill" && wanted === "goods") {
 
-            } else if (offering === "goods" && wanted === "goods") {
-                result.textContent =
-                    "You are looking for a Goods-for-Goods trade!";
+            result.textContent =
+                "You are looking for a Skill-for-Goods trade!";
 
-            } else {
-                result.textContent =
-                    "We couldn't determine your trade type.";
-            }
-        });
+        } else if (offering === "goods" && wanted === "skill") {
 
-            const members = [
-                { name: "Alex", skill: "Photography" },
-                { name: "Jordan", skill: "Cooking" },
-                { name: "Taylor", skill: "Graphic Design" },
-                { name: "Morgan", skill: "Car Repair" },
-                { name: "Casey", skill: "Guitar" },
-                { name: "Jamie", skill: "Gardening" },
-                { name: "Riley", skill: "Web Design" },
-                { name: "Cameron", skill: "Woodworking" },
-                { name: "Avery", skill: "Baking" },
-                { name: "Parker", skill: "Sewing" },
-                { name: "Drew", skill: "Computer Repair" },
-                { name: "Reese", skill: "Painting" },
-                { name: "Sam", skill: "Home Improvement" },
-                { name: "Quinn", skill: "Dog Training" },
-                { name: "Blake", skill: "Auto Detailing" }
-            ];
-            
-            
-            // Show 3 random SkillSwap members
-            document.getElementById("showMembersBtn").addEventListener("click", function() {
-            
-                let memberOutput = "";
-                let availableMembers = [...members];
-                for (let i = 0; i < 3; i++) {
-            
-                    
-                    let randomIndex = Math.floor(
-                        Math.random() * availableMembers.length
-                    );
-            
-                    let randomMember = availableMembers[randomIndex];
-        
-                    memberOutput +=
-                        "<p><strong>" + randomMember.name + "</strong>" +
-                        " can teach " + randomMember.skill + "</p>";
-                    availableMembers.splice(randomIndex, 1);
-                }
-                document.getElementById("memberList").innerHTML =
-                    memberOutput;
-            });
-    </script>
+            result.textContent =
+                "You are looking for a Goods-for-Skill trade!";
+
+        } else if (offering === "goods" && wanted === "goods") {
+
+            result.textContent =
+                "You are looking for a Goods-for-Goods trade!";
+
+        } else {
+
+            result.textContent =
+                "We couldn't determine your trade type.";
+        }
+
+    });
+
+
+    // Array of 15 SkillSwap members
+    const members = [
+        { name: "Alex", skill: "Photography" },
+        { name: "Jordan", skill: "Cooking" },
+        { name: "Taylor", skill: "Graphic Design" },
+        { name: "Morgan", skill: "Car Repair" },
+        { name: "Casey", skill: "Guitar" },
+        { name: "Jamie", skill: "Gardening" },
+        { name: "Riley", skill: "Web Design" },
+        { name: "Cameron", skill: "Woodworking" },
+        { name: "Avery", skill: "Baking" },
+        { name: "Parker", skill: "Sewing" },
+        { name: "Drew", skill: "Computer Repair" },
+        { name: "Reese", skill: "Painting" },
+        { name: "Sam", skill: "Home Improvement" },
+        { name: "Quinn", skill: "Dog Training" },
+        { name: "Blake", skill: "Auto Detailing" }
+    ];
+
+
+    // Show 3 random SkillSwap members
+    document.getElementById("showMembersBtn").addEventListener("click", function() {
+
+        let memberOutput = "";
+
+        // Make a temporary copy of the member list
+        let availableMembers = [...members];
+
+        // Definite loop - runs exactly 3 times
+        for (let i = 0; i < 3; i++) {
+
+            // Choose a random member
+            let randomIndex = Math.floor(
+                Math.random() * availableMembers.length
+            );
+
+            let randomMember = availableMembers[randomIndex];
+
+            // Add selected member to the output
+            memberOutput +=
+                "<p><strong>" + randomMember.name + "</strong>" +
+                " can teach " + randomMember.skill + "</p>";
+
+            // Remove selected member so they cannot appear twice
+            availableMembers.splice(randomIndex, 1);
+        }
+
+        // Display the three selected members
+        document.getElementById("memberList").innerHTML =
+            memberOutput;
+
+    });
+
+</script>
+    
 </body>
 
 </html>
