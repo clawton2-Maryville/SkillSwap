@@ -63,6 +63,29 @@ img {
   max-width: 100%;
 }
 
+.matches {
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 600px;
+    text-align: center;
+}
+
+#memberList {
+    margin: 20px 0;
+}
+
+#memberList p {
+    padding: 10px;
+    margin: 8px 0;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+}
+
+#showMembersBtn {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
 footer {
   background-color: #526d4e;
   color: #ffffff;
